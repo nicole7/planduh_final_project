@@ -10,13 +10,15 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
+require 'google_maps_service'
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Dotenv::Railtie.load
 
-module PlanduhFinalProject
+module RailsRegistrationSkeleton
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
@@ -28,4 +30,12 @@ module PlanduhFinalProject
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
+end
+
+
+
+GoogleMapsService.configure do |config|
+  config.key = ''
+  config.retry_timeout = 20
+  config.queries_per_second = 10
 end

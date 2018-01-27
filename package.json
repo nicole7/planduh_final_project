@@ -1,5 +1,7 @@
 {
-  "name": "planduh_final_project",
+  "name": "rails-registration-skeleton",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
 }
