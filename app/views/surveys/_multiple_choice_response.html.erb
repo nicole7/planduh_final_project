@@ -1,0 +1,11 @@
+<div class="pag-links">
+  <form  action="/survey_questions/<%= question.id %>/user_responses" method="POST">
+      <select name="answer">
+        <% question.responses.each do |response| %>
+          <li><option value="<%= response.response %>"  ><%= response.response %></option></li>
+        <% end %>
+      </select>
+      <%= hidden_field_tag 'page', '1', {class: 'js-form-page'}%>
+      <input type="submit" value="submit" >
+    </form>
+</div>
