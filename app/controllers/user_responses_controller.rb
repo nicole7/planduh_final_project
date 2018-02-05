@@ -1,6 +1,5 @@
 class UserResponsesController < ApplicationController
 
-
   def new
   end
 

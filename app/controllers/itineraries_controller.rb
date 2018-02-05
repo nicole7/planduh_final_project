@@ -3,9 +3,6 @@ class ItinerariesController < ApplicationController
   end
 
   def create
-    # MAKE FIELDS IN SUBMIT FORM **REQUIRED**
-    # REMOVE DUPLICATE ACTIVITIES
-
     @itinerary = Itinerary.create(user: current_user)
     # create time window
     window = time_window(params[:begin_time], params[:end_time])

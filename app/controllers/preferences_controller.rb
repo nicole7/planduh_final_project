@@ -1,15 +1,12 @@
 class PreferencesController < ApplicationController
 
   def new
-
   end
 
   def create
     set_preferences
     redirect_to user_path(current_user.id)
   end
-
-
 
   def destroy
   end
