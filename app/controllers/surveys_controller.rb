@@ -6,7 +6,4 @@ class SurveysController < ApplicationController
 
     render action: :index, layout: request.xhr? == nil
   end
-
-
-
 end
